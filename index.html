@@ -1,0 +1,163 @@
+<!--Ignacio Quevedo (271557), Gabriel Guerra (276712)-->
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Obligatorio 1</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="estilos/estilos.css">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap" rel="stylesheet">
+		<script src="js/clases.js"></script>
+		<script src="js/funciones.js"></script> 
+		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+		<script src="js/grafica.js"></script>
+
+	</head>
+	<body>
+		<main>
+		<section id="Seccion1">
+		<!--Empieza la sección 1-->
+			<header>	
+				<h1>Sistema de donaciones</h1>
+				<br>
+				<!--Logo de la fundación-->
+				<picture>
+					<img src="img/logo.png" alt="Logo de la fundación">
+				</picture>		
+			</header>
+			<br>
+			<!--Hipervínculos-->
+			<nav>
+				<div class="lista">
+					<li class="hipervinculo"> 
+						<a href="#Donantes">Donantes </a>	
+					</li>
+					<li class="hipervinculo">
+						<a href="#Donaciones">Donaciones</a>	
+					</li>
+					<li class="hipervinculo">
+						<a href="#Estadisticas">Estadísticas</a>
+					</li>
+				</ul>
+				<br><br>
+			</nav>
+				
+			<aside>	
+				<!--Total general y monto donación-->
+				
+				<div class="botonNav">
+					Total general
+					<br>
+
+				<p id="totalgeneral"> </p>		
+				</div>
+
+				<div class="botonNav">
+					Monto Donación Mayor
+					<br>
+					<p id="montoDonacionMayor"></p>
+				</div>
+			</aside>		
+		</section>		
+		<!--Termina la sección 1-->
+		<!--Empieza la sección 2-->
+		<section id="Seccion2">
+			
+			<!--Empieza la parte de Registro de Donantes-->
+			<div class="ContDonantes">
+				<a id="Donantes"></a>
+				<h2>Registro de Donantes</h2>
+				<br>
+				<form id="formA">
+					<label for="Nombre">Nombre</label> 
+					<input type="text" id="Nombre" name="Nombre" placeholder="Nombre" class="general" required maxlength="20">
+					<label for="Dirección">Dirección</label>
+					<input type="text" id="Dirección" name="Dirección" placeholder="Dirección" class="general" required maxlength="20"> 	
+					<label for="Teléfono">Teléfono</label> 
+					<input type="number" id="Teléfono" name="Teléfono" placeholder="Teléfono" class="general" required oninput="if(this.value.length > 20)  this.value = this.value.slice(0,20)">	
+					<input type="button" id="button" value="Agregar" name="Agregar">
+					<br><br><br><br>
+				</form>
+			</div>
+			    <!--Termina la parte de Registro de Donantes-->
+				<!--Empieza el artículo de Registro de Donaciones-->
+				<article>
+					<a id="Donaciones"></a>
+					<h2>Registro de Donaciones</h2>
+					<br>	
+					<form id="formB">
+						<label for="selectDonante">Donante</label>
+						<select id="selectDonante" name="selectDonante" required>
+						</select>
+
+							<label for="selectModo">Modo </label>
+							<select id="selectModo" name="select" required>
+								<option value="Efectivo">Efectivo</option>
+								<option value="Transferencia">Transferencia</option>
+								<option value="Canje">Canje</option>
+								<option value="Mercaderia">Mercadería</option>
+								<option value="Cheque">Cheque</option>
+								<option value="Otros">Otros</option>
+							</select>	
+							<label for="monto">Monto</label> 	
+							<input type="number" id="monto" name="monto" class="monto" min="1" required>
+							<label for="comentarios">Comentario</label>
+							<input type="text" id="comentarios" name="comentarios" class="general">
+							<input type="button" id="button2" value="Agregar" name="agregar">	
+					</form>
+				</article>
+					<!--Termina el artículo de Registro de Donaciones-->
+					<br><br>
+					<!--Empieza el artículo de Donaciones Registradas-->
+				<article>
+					<h3>Donaciones Registradas</h3>	
+					<br>
+					<label for="monto_decreciente">Orden:</label> 	
+					<input type="radio" id="monto_decreciente" name="radio" checked/>
+					<label for="monto_decreciente">monto decreciente</label> 
+					<input type="radio" id="nombre_donante_creciente" name="radio"/> 
+					<label for="nombre_donante_creciente">nombre donante creciente</label>
+					<br><br>
+					<table id="idTabla">	
+					</table>		
+						<br>
+						<label for="Resaltado">Resaltar filas:</label>
+						<input type="checkbox" name="Resaltado" id="Resaltado" checked>
+						<label for="demonto">de monto:</label> 
+						<input type="number" name="demonto" id="demonto" placeholder="0" class="monto">
+						<br><br><br>
+					</article>	
+					<!--Termina el artículo de Donaciones Registradas-->
+
+					<!--Empieza el artículo de Estadísticas-->
+					<article>
+						<a id="Estadisticas"></a>	
+						<h2>Estadísticas</h2>
+						<br>
+						<p id="cantidadTotalDonacion">Cantidad total de donaciones: 0 </p>
+							<br>
+							<p id="promedio">Promedio por donación: 0</p>
+							<br>
+							<p id="donanteMayor">Donante que más veces donó:</p>
+						
+
+						<ul id="listaMasVecesDono" class="listaMasVecesDono">
+						</ul>
+
+						<div id="piechart"></div>
+
+					</article>
+
+					<!--Termina el artículo de Estadísticas-->
+		</section>
+		<!--Termina la sección 2-->
+		<!--Empieza el pie de página-->
+		<footer>
+				<p>Cátedra de Programación - Programación 1 - 1er. Semestre 2021 - Ignacio Quevedo (271557) , Gabriel Guerra (276712)</p>
+		</footer>		
+		<!--Termina el pie de página-->
+		</main>
+	</body>
+</html>

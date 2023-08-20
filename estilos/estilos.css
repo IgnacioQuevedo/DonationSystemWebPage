@@ -1,0 +1,187 @@
+/* Ignacio Quevedo (271557) & Gabriel Guerra (276712)*/
+*
+{
+    margin:0px;
+    padding:0px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#Seccion1{
+    text-align:center;
+    width:20%;
+    height:auto;
+    background-color:#d4d4d4;
+    padding-top:15px;
+    float: left;
+}
+#Seccion2{
+   width:80%;
+   height:auto;
+   background-color:#bababa; 
+   float:right;
+   padding-bottom:10px;
+}
+
+article{
+    padding-left:100px;
+}
+
+h1{
+    font-size: 32px;
+}
+h2{
+    font-size: 30px;
+}
+img{
+margin-top: 4px;
+margin-bottom:8px;
+border-radius: 4px;
+width:100px;
+border-radius: 50%;
+background-color: #c3afab;  
+}
+footer{
+    width: 100%;
+    height: 35px;
+    background-color:#808080;
+    text-align:center;
+    padding-top:20px;
+    color:white;
+    clear:both;
+}
+table{
+     width:80%;   
+     text-align:center;
+}
+table, th, td{
+  border:2px ridge black;  
+}
+
+.general{
+    width:220px;
+}
+.monto{
+    width:50px;
+}
+td{
+    font-style:normal;
+}
+#PrecioGeneral{
+    width: 100%;
+    height: 200px;
+    background-color: cadetblue;
+}
+.botonNav{
+    font-style:italic;
+    color: white;
+    background-color:#3a6fa2;
+    margin-right: 20px;
+    margin-left: 20px;
+    border:4px double #b7b7b7;
+    border-radius:15px; 
+    padding:10px;
+    margin-bottom:6px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.hipervinculo{
+    background-color:#72a2cf;
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-bottom:6px;
+    border:4px solid #1a36b7;
+    border-radius:15px; 
+    padding:18px;
+    text-align:center;
+    font-size: 25px;
+    font-weight: bolder;
+}
+.rojo{
+    color:red;
+}
+
+.verde{
+    color:green;
+}
+
+.lista{
+    list-style-type: none;
+    font-size: 25px;
+    font-weight: bolder;
+}
+.ContDonantes{
+    padding-left:100px;
+    padding-top: 35px;
+}
+
+.listaMasVecesDono{
+       
+    list-style-image: url("../img/estrellita_opt.png");
+    list-style-type: none;
+    padding-left: 40px;
+    padding-top: 10px;   
+}
+
+
+#piechart{
+    margin-top:10px;
+    width: 40%;
+    height: auto;
+    
+
+}
+
+main{
+    background-color:#d4d4d4;
+}
+
+body{
+   background-color:#808080;
+
+}
+
+@media screen and (max-width: 900px) {
+    .lista{
+        font-size:14px;
+    }    
+}    
+
+
+@media screen and (max-width: 700px) {
+   
+    #Seccion1{
+        
+        text-align:center;
+        
+        background-color:#d4d4d4;
+        padding-top:15px;
+        float: none;
+        width:100%;
+        height:auto;
+        padding-bottom:40px;
+    }
+
+    #Seccion2{
+        width:100%;
+        height:auto;
+        background-color:#bababa;
+        float:none;
+
+   
+    }
+
+  footer{
+    width: 100%;
+    height:auto;
+    background-color:#808080;
+    text-align:center;
+    padding-top:20px;
+    color:white;
+
+  }
+
+  #piechart{
+    width: 70%;
+    height: auto;    
+  }
+}
