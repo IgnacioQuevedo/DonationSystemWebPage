@@ -1,7 +1,7 @@
 # DonationSystemWebPage
 Sistema de Donaciones (2021)
 Ignacio Quevedo - Gabriel Guerra.
-![img1](https://github.com/IQ271557/DonationSystemWebPage/assets/111322905/ed14e81c-20e4-458d-9386-e1e491a5b0fa)
+![imgreplazo](https://github.com/IQ271557/DonationSystemWebPage/assets/111322905/51bfd34d-e9a0-42d4-9980-105aa6b96281)
 ![img2](https://github.com/IQ271557/DonationSystemWebPage/assets/111322905/306f1f12-d662-4da4-8f92-84a579edc7e6)
 
 Funcionalidad requerida: • Registro de donantes Se ingresará de cada donante su nombre (máximo 20 caracteres, requerido), dirección (máximo 20 caracteres, requerido) y teléfono (máximo 20 caracteres, requerido). No se permiten ingresar donantes con el mismo nombre (ignorando mayúsculas/minúsculas).
